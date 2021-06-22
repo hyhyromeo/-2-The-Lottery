@@ -1,0 +1,295 @@
+body{
+    background-color: rgb(15, 15, 48);
+    /* color: white;
+    background-image: url('./assets/dribbble2.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 60px; */
+}
+
+img {
+  object-position: center top;
+  max-width: 65%;
+  max-height: 65%;
+  display: block;
+  margin: 0 auto;
+
+}
+
+
+
+b {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-left: 10px;
+}
+
+.col{
+    min-height: 80px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#top-container {
+    
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  max-width: 1500px;
+  color: white;
+  background-color: rgb(15, 15, 48);
+}
+
+#mid-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  max-width: 1500px;
+  text-align: justify;
+  color: white;
+  background-color: rgb(15, 15, 48);
+  word-break:break-all;
+  overflow-wrap:break-word;
+  border-bottom: 2px dashed white;
+  /* border-left: 2px dashed white;
+  border-right: 2px dashed white; */
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#bottom-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  max-width: 1500px;
+  text-align: justify;
+  color: white;
+
+  /* word-break:break-all;
+  overflow-wrap:break-word; */
+}
+
+#countdown-section {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  max-width: 1500px;
+  text-align: justify;
+  color: white;
+  background-color: rgb(15, 15, 48);
+  /* word-break:break-all;
+  overflow-wrap:break-word; */
+}
+
+#lastdraw-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 150px;
+  max-width: 1500px;
+  text-align: justify;
+  color: white;
+  /* word-break:break-all;
+  overflow-wrap:break-word; */
+}
+
+#about-us {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  max-width: 1500px;
+  text-align: justify;
+  color: white;
+  background-color: rgb(15, 15, 48);
+  border-top: 2px dashed white;
+  /* border-left: 2px dashed white;
+  border-right: 2px dashed white; */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* word-break:break-all;
+  overflow-wrap:break-word; */
+}
+
+#carousel-container{
+    min-height: 400px;
+}
+
+#game-history{
+    min-height: 250px;
+}
+
+*{
+    font-family: 'Nanum Gothic', sans-serif;
+    /* border: 1px dashed red; */
+    /* padding: 15px; */
+}
+
+/* .randomGen{
+    margin-left: 15px;
+}
+
+.col-.btn.btn-primary {
+  height: 35px;
+  width: 35px;
+  border-radius: 35px;
+  justify-content: center;
+  background-color: #007bff;
+}
+
+.col-.btn.btn-primary:hover {
+  background-color: rgba(180, 180, 0, 0.349);
+  color: black;
+}
+
+.stats-container{
+  background-color:rgba(10, 10, 10, 0.329);
+  border-radius: 15px;
+}
+
+.stats-container * {
+  /* border: 1px solid white; 
+  border-radius: 15px;
+}
+
+#game-history{
+  background-color:rgba(10, 10, 10, 0.329);
+  border-radius: 15px;
+}
+
+#game-status{
+  padding: 0;
+  margin: 0px;
+  /* border: 1px solid red; 
+}
+
+#status{
+  background-color:rgba(10, 10, 10, 0.329);
+  border-radius: 15px;
+}
+
+#carousel-section{
+  background-color:rgba(10, 10, 10, 0.329);
+  border-radius: 15px;
+}
+
+#card * {
+  /* background-color:rgba(10, 10, 10, 0.329); 
+  border-radius: 15px;
+}
+
+.carousel-item {
+  min-height: 300px;
+  min-width: 600px;
+  background: #777;
+  color: white;
+  /* position: relative; 
+  background-position: center;
+  background-size: cover;
+} */
+
+
+
+/* .container { */
+  /* position: absolute; */
+  /* bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px; */
+/* } */
+
+.col.user {
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.circleOfResult {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  background-image: url('../assets/edit.jpg') ;
+  background-size: cover;
+  font-size: 75px;
+  color: rgb(2, 2, 2);
+  line-height: 160px;
+  text-align: center;
+  border: 2px solid rgb(0, 0, 0);
+  transition: background-color 2s ease;
+}
+
+#countdown-section {
+  min-height: 330px;
+  background-color: rgba(242, 240, 240, 0.527);
+  border-radius: 15px;
+} 
+
+.container {
+
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+.container li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.container li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+b li {
+  color: white;
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+b li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  li {
+    font-size: 1.125rem;
+    padding: .75rem;
+  }
+  
+  li span {
+    font-size: 3.375rem;
+  }
+} 
+
+
+
+.img-container{
+  min-width: 1500px;
+  min-height: 600px;
+  /* width: fit-content;
+  height:fit-content; */
+}
+
+.carousel-image{
+  width: 1500px;
+  height: 600px;
+}

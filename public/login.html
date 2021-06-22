@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!DOCTYPE html>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link href="./signin.css" rel="stylesheet" />
+  <!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+
+  <!------ Include the above in your HEAD tag ---------->
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" />
+  <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" /> -->
+  <script src="./login.js" defer></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css" />
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<link href="./signin.css" rel="stylesheet"> -->
+<!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+
+
+<!------ Include the above in your HEAD tag ---------->
+<!-- <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src='./login.js' defer></script> -->
+
+
+</head>
+
+<body>
+
+  <!-- header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href=""><img src="./assets/amazing.png" style="height: 35px; width: 160px" alt="" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index-backup.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./simulator/simulator.html">Tickets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./profile/profile.html" id="welcome">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html" id="login">Login</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>  
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 mx-auto">
+        <div id="first">
+          <div class="myform form">
+            <div class="logo mb-3">
+              <div class="col-md-12 text-center">
+                <h1>Login</h1>
+              </div>
+            </div>
+
+            <form name="login" id="loginForm">
+              <div class="form-group">
+                <label for="UserName">User Name</label>
+                <input type="username" name="username" class="form-control" id="username" placeholder="Enter UserName"
+                  required>
+              </div>
+              <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password"
+                  required>
+              </div>
+              <div class="form-group">
+                <p class="text-center">By signing up you accept our <a href="#">Terms Of Use</a></p>
+              </div>
+              <div class="col-md-12 text-center ">
+                <input type="submit" id="login-form-submit" class=" btn btn-block mybtn btn-primary tx-tfm"
+                  value="login">
+              </div>
+              <br>
+              <div class="col-md-12 text-center ">
+                <input type="reset" id="login-form-reset" class=" btn btn-block mybtn btn-primary tx-tfm" value="Reset">
+              </div>
+            </form>
+
+            <div class="col-md-12 ">
+              <div class="login-or">
+                <hr class="hr-or">
+                <span class="span-or">or</span>
+              </div>
+              <div class="g-signin2"></div>
+
+              <div class="col-md-12 mb-3">
+                <p class="text-center">
+                  <a href="/connect/google" class="google btn mybtn">
+                    <i class="fa fa-google-plus">
+                    </i> Signup using Google
+                  </a>
+                </p>
+              </div>
+              <div class="form-group">
+                <p class="text-center">Don't have account? <a href="./register.html" id="signup">Sign up here</a>
+                </p>
+              </div>
+              </form>
+
+              <!-- <div class="col-md-12">
+                <div class="login-or">
+                  <hr class="hr-or" />
+                  <span class="span-or">or</span>
+                </div>
+                <div class="g-signin2"></div>
+
+                <div class="col-md-12 mb-3">
+                  <p class="text-center">
+                    <a href="/connect/google" class="google btn mybtn">
+                      <i class="fa fa-google-plus"> </i> Signup using Google
+                    </a>
+                  </p>
+                </div>
+                <div class="form-group">
+                  <p class="text-center">
+                    Don't have account?
+                    <a href="/register.html" id="signup">Sign up here</a>
+                  </p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="./login.js"></script> -->
+</body>
+<br>
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Sign up for our newsletter or check out our blog and instagram to
+        receive the latest news from us, we have updates on a daily basis with
+        discounted tickets and new prizes. Be sure to stay tune.
+      </p>
+    </section>
+    <!-- Section: Text -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(253, 249, 249, 0.219)">
+    © 2021 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">amazinglottery.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+</html>

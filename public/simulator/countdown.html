@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css"
+    />
+
+    <link rel="stylesheet" href="countdown.css" />
+    <script>
+      fetch('/current_user')
+          .then(res => res.json())
+          .then(user => {
+              if (user) {
+                  document.querySelector('#welcome').innerHTML = `
+                  ${user.username}`
+                  document.querySelector('#login').innerHTML =`
+                    <a hidden class="nav-link" href="login.html" id="">Login</a>`
+  
+                }}
+          )
+          
+          .catch('<div class="col"><i class="fas fa-user"></i>Test User</div>')
+                  
+                  
+                  
+                  </script>
+    <title>Countdown</title>
+  </head>
+
+  <body>
+    <div class="body-padding">
+      <!-- header -->
+      <div class="row">
+        <div class="col-8"><i class="fas fa-ticket-alt fa-3x"></i></div>
+        <div class="col user" id="welcome"><a href="/profile/profile.html"></a><i class="fas fa-user"></i>Test User</div>
+      </div>
+      <!-- end of header -->
+
+      <!-- <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_yjlrepyh.json"              
+        background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player> -->
+      <div class="container">
+        <h1>Lottery Round <span style="color: red;" id="roundId"></span> Starts in :</h1>
+        <div class="cardR" id="countdown">
+            <span id="countdown" style="font-weight: bold"></span>
+          </div>
+      </div>
+      
+     
+    </div>
+
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+  </body>
+  <!-- <script src="lottery-page.js"></script> -->
+  <script src="countdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    type="text/javascript"
+  ></script>
+</html>

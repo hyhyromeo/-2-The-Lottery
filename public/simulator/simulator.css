@@ -1,0 +1,217 @@
+body {
+  background-color: rgb(15, 15, 48);
+  color: white;
+}
+
+
+.headerPad{
+  display: flex;
+  margin-left: 20px;
+}
+* {
+  font-family: 'Nanum Gothic', sans-serif;
+  /* color: white; */
+  /* border: 1px dashed red; */
+}
+
+body {
+  background-color: rgb(15, 15, 48);
+}
+
+b {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.numberPickCircle{
+  padding: 15px;
+}
+
+.col.user {
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+}
+.col.countdown-section{
+  padding-bottom: 300px;
+}
+.col {
+  min-height: 80px;
+  font-family: "PT Sans", sans-serif;
+}
+.randomGen {
+  max-width: 100px;
+  color: rgb(235, 227, 227);
+  margin-left: 15px;
+  /* margin: 30px;
+  padding: 15px; */
+  /* background-color: crimson; */
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  color: white;
+  line-height: 118px;
+  text-align: center;
+  border: 2px solid white;
+}
+
+.circleOfResult {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: rgb(175, 25, 25);
+  background-image: url('../assets/edit.jpg') ;
+  background-size: cover;
+  font-size: 75px;
+  color: rgb(255, 255, 255);
+  line-height: 160px;
+  text-align: center;
+  border: 2px solid rgb(0, 0, 0);
+  transition: background-color 2s ease;
+}
+
+/* .circleOfResult{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.3);
+    font-size: 24px;
+    color: black;
+    line-height: 118px;
+    text-align: center;
+    border: 2px solid black;
+} */
+
+.circleOfResult {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  color: white;
+  line-height: 118px;
+  text-align: center;
+  border: 2px solid white;
+  transition: background-color 2s ease;
+}
+
+.displayCircle {
+  width: 60px ;
+  height: 60px ;
+   border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  color: white; 
+  display: inline-block;
+  line-height: 60px;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+.circleOfResult.matched,
+.circle.matched {
+  background-color: rgb(7, 218, 7);
+  transition: background-color 2s ease;
+}
+.col-.btn.btn-primary {
+  height: 45px;
+  width: 45px;
+  border-radius: 35px;
+  justify-content: center;
+}
+
+.col-.btn.btn-primary:hover {
+  background-color: rgba(180, 180, 0, 0.349);
+  color: black;
+}
+
+#countdown-section {
+  min-height: 330px;
+  background-color: rgba(242, 240, 240, 0.034);
+  border-radius: 15px;
+  max-width: 1500px;
+  object-position: center top;
+  display: block;
+margin: 0 auto;
+}
+
+.btn-danger{
+  margin: 30px;
+  padding: 15px;
+  background-color: crimson;
+
+}
+
+#lottoResult{
+  justify-content: center;
+}
+
+.container {
+
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+.container li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+container li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  li {
+    font-size: 1.125rem;
+    padding: .75rem;
+  }
+  
+  li span {
+    font-size: 3.375rem;
+  }
+} 
+
+table, th, td {
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+  min-width: 300px;
+  font-size: x-large;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+.footer{
+  /* display: block; */
+  position: relative;
+  /* min-height: 100%; */
+  /* 設定footer的高度 */
+  /* height: 40px; */
+  box-sizing: border-box;
+  /* 設定footer絕對位置在底部 */
+  /* position: absolute; */
+  background-color: rgb(37, 37, 37);
+  bottom: 0;
+  /* 展開footer寬度 */
+  width: 100%;
+}

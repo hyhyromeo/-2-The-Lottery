@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(15, 14, 47);
+  color: white;
+  /* background-image: url("../assets/Spiral.jpeg"); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* padding: 60px; */
+}
+h1 {
+  font-size: 6.5rem;
+  font-family: Impact;
+}
+.col.user {
+  min-height: 80px;
+  font-family: "PT Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+/* general styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  /* padding: 100px; */
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cardR {
+  margin: 100px auto;
+  padding: 50px;
+  max-width: 900px;
+  text-align: center;
+  background-color: #000000c2;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px -5px #00ff8a;
+}
+
+#countdown {
+  font-size: 60px;
+  font-family: Impact;
+  color: rgb(252, 252, 252);
+}

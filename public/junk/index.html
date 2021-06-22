@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Cover page - lottery</title>
+</head>
+
+<body>
+
+    <a href="./simulator/simulator.html"> LINK Simulator </a>
+    <a href="./simulator/lottery-page.html"> LINK Lottery </a>
+
+    <!-- header -->
+    <div class="row">
+        <div class="col-8"><i class="fas fa-ticket-alt fa-3x"></i></div>
+        <div class="col" ><i class="fas fa-user" >
+            <a href="/login.html"></i>Login / Register</a>
+        </div>
+        
+    </div>
+    <!-- end of header -->
+
+    <!-- Carousel -->
+    <div>
+        <div>
+            <div id="carousel-section" class="row">
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+
+                <div class="col-8" id="carousel-container">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol> -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" style="background-image: url(./assets/download.jpeg);">
+                                <div class="container">
+                                    <!-- <p>Test</p>
+                                <a href="#" class="btn btn-lg btn-primary">Link</a> -->
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="background-image: url(./assets/Image-from-iOS-28.jpeg);">
+                                <div class="container">
+                                    <!-- <p>Test</p>
+                                <a href="#" class="btn btn-lg btn-primary">Link</a> -->
+                                </div>
+                            </div>
+                            <div class="carousel-item" style="background-image: url(./assets/images.jpeg);">
+                                <div class="container">
+                                    <!-- <p>Test</p>
+                                <a href="#" class="btn btn-lg btn-primary">Link</a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+                            <span class="sr-only">previous</span>
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+                            <span class="sr-only">next</span>
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="carousel-container" class="col">Carousel</div>
+    </div>
+    <div class="col">Status</div>
+    <div id="game-histroy" class="col">Game history</div>
+    <div class="row">
+        <div class="col">Recent bets</div>
+        <div class="col">Recent wins</div>
+    </div>
+
+    <h1>Lottery</h1>
+    <div class="row begin-countdown">
+        <div class="col-md-12 text-left">
+            <h2> Lottery draw in <span id="pageBeginCountdownText">10 </span> seconds:</h2>
+        </div>
+    </div>
+    <div class="row justify-content-left mt-4 mb-4">
+        <div style="margin-left: 15px" class="row justify-content-left" id="lottoResult"></div>
+    </div>
+
+    <h2>Select a number 1-49 to enter the draw, or press random to generate number</h2>
+
+    </div>
+
+    <div class="row justify-content-left mt-4 mb-4">
+        <button type="button" class="randomGen" onclick="playerPick()">Generate</button>
+    </div>
+    <div class="row justify-content-left" id="lotto"></div>
+    <div class="row">
+        <output> Matched Result will turn Green ! </output>
+    </div>
+
+    <div class="numberPickCircle"></div>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">1</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">2</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">3</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">4</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">5</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">6</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">7</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">8</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">9</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">10</button> 
+    <br>
+    <br>
+
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">11</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">12</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">13</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">14</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">15</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">16</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">17</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">18</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">19</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">20</button>
+    <br>
+    <br>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">21</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">22</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">23</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">24</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">25</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">26</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">27</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">28</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">29</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">30</button>
+    <br>
+    <br>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">31</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">32</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">33</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">34</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">35</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">36</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">37</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">38</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">39</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">40</button>
+    <br>
+    <br>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">41</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">42</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">43</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">44</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">45</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">46</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">47</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">48</button>
+    <button type="button" onclick="setColor(event)" class="col- btn btn-primary">49</button>
+
+
+
+
+</body>
+<!-- <script>
+    fetch('/current_user')
+      .then(res => res.json())
+      .then(user => {
+        if (user) {
+          console.log(user);
+        }
+      }) -->
+  
+<script src="./simulator/random.js"></script>
+
+</html>
